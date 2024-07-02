@@ -4,35 +4,80 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../../styles/footer.css">
     <link rel="stylesheet" href="../../styles/header.css">
+    <link rel="stylesheet" href="../../styles/general.css">
+    <link rel="stylesheet" href="../../styles/plan_salud.css">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <title>Plan de Salud</title>
-</head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"></head>
 <body class="flex flex-col min-h-screen">
 
     <header>
         <div class="header-gradient w-full flex justify-end items-center p-4">
             <div class="flex items-center">
+                <p class="text-white mr-4">Viernes 5, Junio 19:00</p>
                 <img src="../../img/foto-perfil.webp" alt="Foto de perfil" class="h-10 w-10 rounded-full mr-2">
                 <span class="text-white">Usuario</span>
             </div>
         </div>   
     </header>
 
-    <div class="flex flex-grow">
+    <div id="contenedor-principal" class="flex flex-grow">
         <div id="menu-lateral" class="w-64 bg-gray-200 text-white">
-            <p class="text-xl font-bold p-5 text-black">Turnos</p>
+            <p class="text-2xl font-bold p-5 text-black">Turnos</p>
                 <ul class="space-y-2 p-5">
-                <li>
-                    <a href="#" class="block py-2.5 px-4 rounded bg-blue-900">Solicitar turno</a>
-                </li>
-                <li>
-                    <a href="#" class="block py-2.5 px-4 rounded hover:bg-blue-900 text-black hover:text-white">Próximos turnos</a>
-                </li>
+                    <li>
+                        <a href="#" class="block py-2.5 px-4 rounded bg-blue-900 flex items-center">
+                            <i class="fas fa-search text-white mr-2"></i> Solicitar turno
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="block py-2.5 px-4 rounded hover:bg-blue-900 text-black hover:text-white flex items-center">
+                            <i class="fas fa-calendar-alt mr-2"></i> Próximos turnos
+                        </a>
+                    </li>
             </ul>
         </div>
 
         <main class="flex-grow">
-            <!-- Contenido principal -->
+            <div id="bloque" class="bloque-1 bg-blue-900 text-white p-8 rounded-lg w-3/4 mx-auto h-1/2 mt-8">
+                <h2 class="font-bold text-2xl">Seleccione la especialidad deseada</h2><br>
+                <div id="contenedor-opciones"class="flex justify-around w-full mt-4">
+                    <div id="opciones-1" class="flex flex-col space-y-4">
+                        <button onclick="seleccionarEspecialidad('Ginecología')" style="width: 400px;" class="bg-orange-500 text-white py-3 rounded">Ginecología</button>
+                        <button onclick="seleccionarEspecialidad('Clínica Médica')"  class="bg-orange-500 text-white py-3 rounded">Clínica Médica</button>
+                        <button onclick="seleccionarEspecialidad('Cardiología')"  class="bg-orange-500 text-white py-3 rounded">Cardiología</button>
+                    </div>
+                    <div class="flex flex-col space-y-4">
+                        <button onclick="seleccionarEspecialidad('Dermatología')" style="width: 400px;" class="bg-orange-500 text-white py-3 rounded">Dermatología</button>
+                        <button onclick="seleccionarEspecialidad('Traumatología')"  class="bg-orange-500 text-white py-3 rounded">Traumatología</button>
+                        <button onclick="seleccionarEspecialidad('Otorrinolaringología')"  class="bg-orange-500 text-white py-3 rounded">Otorrinolaringología</button>
+                    </div>
+                </div>
+            </div>
+            <div id="bloque" class="bloque-2 bg-blue-900 text-white p-8 rounded-lg w-3/4 mx-auto mt-8">
+                <h2 class="font-bold text-2xl">Buscá el turno que necesitas!</h2><br>
+                <div class="flex items-center justify-between">
+                    <input type="text" id="especialidadSeleccionada" class="text-black w-1/3 p-4 rounded-lg border-2 border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:outline-none shadow-sm" placeholder="Especialidad seleccionada">
+                    <div class="flex flex-col mr-4 -mt-6"> 
+                        <span class="text-lg mb-2">Formato:</span> <br>
+                        <div class="flex">
+                            <div class="flex items-center mr-2">
+                                <input type="radio" id="presencial" name="formatoTurno" value="Presencial" class="text-blue-500 focus:ring-blue-500">
+                                <label for="presencial" class="ml-2 text-white">Presencial</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="radio" id="virtual" name="formatoTurno" value="Virtual" class="text-blue-500 focus:ring-blue-500">
+                                <label for="virtual" class="ml-2 text-white">Virtual</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="fecha" class="flex flex-col -mt-9">
+                        <span class="text-lg mb-2">Fecha:</span>
+                        <input type="date" id="fechaTurno" name="fechaTurno" class="text-black p-2 rounded-lg border-2 border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:outline-none shadow-sm">
+                    </div>
+                    <button id="buscarTurno" class="bg-orange-500 text-white py-3 px-6 rounded">Buscar Turno</button>
+                </div>
+            </div>
         </main>
     </div>
 
@@ -43,3 +88,9 @@
 
 </body>
 </html>
+
+<script>
+    function seleccionarEspecialidad(especialidad) {
+        document.getElementById('especialidadSeleccionada').value = especialidad;
+    }
+</script>

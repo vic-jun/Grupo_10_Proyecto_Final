@@ -1,0 +1,101 @@
+/* MEDIA QUERYS TABLET */
+
+@media screen and (min-width: 40.1em) and (max-width: 90em) {
+    button {
+        width:200px !important;
+    }
+
+    
+    #contenedor-principal{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    
+    }
+
+    #menu-lateral {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    .bloque-2 .flex.items-center.justify-between {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .bloque-2 .flex.flex-col {
+        margin-top: 0;
+    }
+
+    #especialidadSeleccionada {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #fecha {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    
+
+}
+
+    
+/* MEDIA QUERYS SMARTPHONE*/
+    
+ @media screen and (max-width: 40em) {
+
+    #contenedor-principal{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    
+    }
+
+    #menu-lateral {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    body {
+        font-size: 18px;
+    }
+
+    button {
+        width:250px !important;
+    }
+
+    #contenedor-opciones {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #opciones-1 {
+        margin-bottom: 14px;
+    }
+
+    .bloque-2 .flex.items-center.justify-between {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .bloque-2 .flex.flex-col {
+        margin-top: 0;
+    }
+
+    #especialidadSeleccionada {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #fecha {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+
+
+
+ }
+
