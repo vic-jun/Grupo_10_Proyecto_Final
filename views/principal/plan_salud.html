@@ -2,20 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../styles/footer.css">
+    <link rel="stylesheet" href="../../styles/header.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <title>Plan de Salud</title>
 </head>
-<body>
+<body class="flex flex-col min-h-screen">
 
     <header>
-
+        <div class="header-gradient w-full flex justify-end items-center p-4">
+            <div class="flex items-center">
+                <img src="../../img/foto-perfil.webp" alt="Foto de perfil" class="h-10 w-10 rounded-full mr-2">
+                <span class="text-white">Usuario</span>
+            </div>
+        </div>   
     </header>
 
-    <main>
+    <div class="flex flex-grow">
+        <div id="menu-lateral" class="w-64 bg-gray-200 text-white">
+            <p class="text-xl font-bold p-5 text-black">Turnos</p>
+                <ul class="space-y-2 p-5">
+                <li>
+                    <a href="#" class="block py-2.5 px-4 rounded bg-blue-900">Solicitar turno</a>
+                </li>
+                <li>
+                    <a href="#" class="block py-2.5 px-4 rounded hover:bg-blue-900 text-black hover:text-white">Próximos turnos</a>
+                </li>
+            </ul>
+        </div>
 
-    </main>
+        <main class="flex-grow">
+            <!-- Contenido principal -->
+        </main>
+    </div>
 
-    <footer>
-
+    <footer id="footer" class="footer align-items-center">
+        <div>© Copyrigth 2024</div>
+        <div>Todos los derechos reservados</div>
     </footer>
 
 </body>
