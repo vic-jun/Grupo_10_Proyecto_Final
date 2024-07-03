@@ -1,0 +1,31 @@
+.hero {
+    background: url('/img/fondoGris.jpg') no-repeat center center/cover;
+}
+
+:root {
+    --azul: #013192;
+    --botones: rgb(255, 102, 0);
+}
+
+.button {
+    cursor: pointer;
+    background-color: var(--botones) !important;
+}
+
+.hero-image{
+    width: 80%;
+}
+
+.hero-content{
+   padding: 0rem 3rem;
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-text {
+        margin-bottom: 20px;
+    }
+}

@@ -3,20 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <title>Home</title>
+    <link rel="stylesheet" href="../../styles/footer.css">
+    <link rel="stylesheet" href="../../styles/header.css">
+    <link rel="stylesheet" href="../../styles/general.css">
+    <link rel="stylesheet" href="../../styles/home.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body>
-
-    <header>
-
-    </header>
-
-    <main>
-
-    </main>
-
-    <footer>
-
-    </footer>
-
+<body class="text-white font-sans">
+<header class="header-gradient p-4 flex items-center justify-between">
+    <div class="text-white font-bold text-lg">
+        <a href="#">Obra Social</a>
+    </div>
+    <nav class="hidden md:flex space-x-4">
+        <a href="#" class="text-white hover:text-gray-300">Home</a>
+        <a href="#" class="text-white hover:text-gray-300">Servicios</a>
+        <a href="#" class="text-white hover:text-gray-300">Especialidades</a>
+        <a href="#" class="text-white hover:text-gray-300">Sobre Nosotros</a>
+    </nav>
+    <div class="text-white flex items-center space-x-4">
+        <div class="flex items-center">
+            <img src="../../img/foto-perfil.webp" alt="Foto de perfil" class="h-10 w-10 rounded-full mr-2">
+            <span class="text-white">Usuario</span>
+        </div>
+    </div>
+</header>
+<section class="hero flex items-center justify-center h-screen">
+    <div class="hero-content flex items-center">
+        <div class="hero-text max-w-lg">
+            <h1 class="text-4xl font-bold leading-tight mb-4">Cuidamos de tu salud, siempre cerca de ti</h1>
+            <ul class="list-disc list-inside mb-6">
+                <li>Solicitá turnos médicos en línea, rápidamente y sin complicaciones</li>
+                <li>Accedé a tus resultados de análisis y estudios desde cualquier dispositivo</li>
+                <li>Más de medio siglo de experiencia en salud y bienestar para la comunidad</li>
+            </ul>
+            <div class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4">
+                <a href="#" class="button text-white py-2 px-4 rounded">Quiero ser socio</a>
+                <a href="#" class="button hover:bg-orange-600 text-white py-2 px-4 rounded">Quiero un turno</a>
+            </div>
+        </div>
+        <div class="hero-image hidden md:block ml-6">
+            <img src="/img/seguroMedico.jpg" alt="Médico" class="rounded-lg shadow-lg">
+        </div>
+    </div>
+</section>
+<footer id="footer" class="footer align-items-center">
+        <div>© Copyrigth 2024</div>
+        <div>Todos los derechos reservados</div>
+</footer>
 </body>
 </html>
