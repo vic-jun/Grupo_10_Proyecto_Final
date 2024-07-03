@@ -15,12 +15,20 @@
 
 <body class="flex flex-col min-h-screen">
 
-    <header>
-        <div class="header-gradient w-full flex justify-end items-center p-4">
+    <header class="header-gradient p-4 flex items-center justify-between">
+        <div class="text-white font-bold text-lg">
+            <a href="#">Obra Social</a>
+        </div>
+
+        <nav class="hidden md:flex space-x-4">
+            <a href="#" class="text-white hover:text-gray-300">Portal de Turnos</a>
+            <a href="#" class="text-white hover:text-gray-300">Especialidades</a>
+            <a href="#" class="text-white hover:text-gray-300">Sobre Nosotros</a>
+        </nav>
+
+        <div class="text-white flex items-center space-x-4">
             <div class="flex items-center">
-                <p class="text-white mr-4">Viernes 5, Junio 19:00</p>
-                <img src="../../img/foto-perfil.webp" alt="Foto de perfil" class="h-10 w-10 rounded-full mr-2">
-                <span class="text-white">Usuario</span>
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="window.location.href='../formulario/login.html'">Iniciar Sesión</button>
             </div>
         </div>
     </header>
@@ -39,16 +47,12 @@
 
             <div class="card bg-white shadow-lg rounded-lg p-6 w-1/4">
                 <h2 class="font-bold text-2xl mb-4">Plan Oro</h2>
-                <ul>
-                    <li>Beneficio 1</li>
-                    <li>Beneficio 2</li>
-                    <li>Beneficio 3</li>
-                </ul>
+                <p>Nuestro plan oro te ofrece una gama exclusiva de beneficios, incluyendo un 20% de descuento en todos los centros DIM y ópticas, hasta un 40% en ortopedias, 20% en asistencia al viajero, 30% en seguro médico, servicio de emergencias con coseguro las 24hs, y hasta un 50% de descuento en farmacias, entre otros beneficios. ¡No pierdas esta oportunidad para maximizar tus beneficios!</p>
             </div>
 
             <div class="card bg-white shadow-lg rounded-lg p-6 w-1/4">
                 <h2 class="font-bold text-2xl mb-4">Plan Premium</h2>
-                <p>Descripción del plan premium...</p>
+                <p>Nuestro plan premium te ofrece una gama exclusiva de beneficios, incluyendo un 30% de descuento en todos los centros DIM y ópticas, hasta un 40% de descuento en ortopedias, 20% en asistencia al viajero, 30% en seguro médico, servicio de emergencias con coseguro las 24hs, y hasta un 50% de descuento en farmacias, entre otros beneficios. ¡No pierdas esta oportunidad para maximizar tus beneficios!</p>
             </div>
         </div>
 
