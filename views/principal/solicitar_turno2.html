@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../styles/footer.css">
+    <link rel="stylesheet" href="../../styles/header.css">
+    <link rel="stylesheet" href="../../styles/general.css">
+    <link rel="stylesheet" href="../../styles/solicitar_turno2.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Turnos disponibles</title>
+</head>
+
+<body class="flex flex-col min-h-screen">
+
+<header>
+    <div class="header-gradient w-full flex justify-between items-center p-4">
+        <a href="solicitar_turno.html" class="text-white text-xl">&lt; volver</a>
+        <div class="flex space-x-4">
+            <p class="pr-2">Filtros:</p>
+            <select class="bg-white rounded p-2">
+                <option>Centros (1)</option>
+                <option>Centro unico</option>
+            </select>
+            <input type="date" id="fecha" class="bg-white rounded p-2">
+            <select class="bg-white rounded p-2">
+                <option>Día semanal (7)</option>
+                <option>Todos</option>
+                <option>Lunes</option>
+                <option>Martes</option>
+                <option>Miércoles</option>
+                <option>Jueves</option>
+                <option>Viernes</option>
+                <option>Sábado</option>
+                <option>Domingo</option>
+            </select>
+            <select class="bg-white rounded p-2">
+                <option>Horarios (3)</option>
+                <option>Todos</option>
+                <option>Mañana</option>
+                <option>Tarde</option>
+                <option>Noche</option>
+            </select>
+            <select class="bg-white rounded p-2">
+                <option>Especialidad (6)</option>
+                <option>Todos</option>
+                <option>Ginecología</option>
+                <option>Dermatología</option>
+                <option>Clínica Médica</option>
+                <option>Cardiología</option>
+                <option>Traumatología</option>
+                <option>Otorrinolaringología</option>
+            </select>
+        </div>
+        <div class="flex items-center">
+            <p class="text-white mr-4">Viernes 5, Junio 19:00</p>
+            <img src="../../img/foto-perfil.webp" alt="Foto de perfil" class="h-10 w-10 rounded-full mr-2">
+            <span class="text-white">Usuario</span>
+        </div>
+    </div>
+</header>
+
+    <div id="contenedor-principal" class="flex flex-grow">
+        <main class="flex flex-wrap justify-around my-8 space-x-4">
+            <div class="card bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col my-2 ml-4 mr-4">
+                <div class="flex justify-between">
+                    <h2 class="font-bold text-xl mb-2">Ginecología</h2>
+                    <span class="inline-block bg-blue-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 flex items-center justify-center text-center">Presencial</span>
+                </div>
+                <p class="font-bold text-xl mb-1 text-gray-700">Centro: Centro Unico</p>
+                <p class="font-bold text-xl mb-1 text-gray-700">Día: Viernes 5, JUL</p>
+                <p class="mb-1 text-gray-700 text-base">Horario: 19:50</p>
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4" onclick="window.location.href='proximos_turnos.html'">Confirmar</button>
+            </div>
+
+            <div class="card bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col my-2 mx-auto">
+                <div class="flex justify-between">
+                    <h2 class="font-bold text-xl mb-2">Dermatología</h2>
+                    <span class="inline-block bg-blue-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 flex items-center justify-center text-center">Presencial</span>
+                </div>
+                <p class="font-bold text-xl mb-1 text-gray-700">Centro: Centro Unico</p>
+                <p class="font-bold text-xl mb-1 text-gray-700">Día: Viernes 5, JUL</p>
+                <p class="mb-1 text-gray-700 text-base">Horario: 19:40</p>
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4" onclick="window.location.href='proximos_turnos.html'">Confirmar</button>
+            </div>
+
+            <div class="card bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col my-2 mx-auto">
+                <div class="flex justify-between">
+                    <h2 class="font-bold text-xl mb-2">Clínica Médica</h2>
+                    <span class="inline-block bg-blue-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 flex items-center justify-center text-center">Presencial</span>
+                </div>
+                <p class="font-bold text-xl mb-1 text-gray-700">Centro: Centro Unico</p>
+                <p class="font-bold text-xl mb-1 text-gray-700">Día: Viernes 5, JUL</p>
+                <p class="mb-1 text-gray-700 text-base">Horario: 19:30</p>
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4" onclick="window.location.href='proximos_turnos.html'">Confirmar</button>
+            </div>
+
+            <div class="card bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col my-2 mx-auto">
+                <div class="flex justify-between">
+                    <h2 class="font-bold text-xl mb-2">Traumatología</h2>
+                    <span class="inline-block bg-blue-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 flex items-center justify-center text-center">Presencial</span>
+                </div>
+                <p class="font-bold text-xl mb-1 text-gray-700">Centro: Centro Unico</p>
+                <p class="font-bold text-xl mb-1 text-gray-700">Día: Viernes 5, JUL</p>
+                <p class="mb-1 text-gray-700 text-base">Horario: 19:20</p>
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4" onclick="window.location.href='proximos_turnos.html'">Confirmar</button>
+            </div>
+
+            <div class="card bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col my-2 mx-auto">
+                <div class="flex justify-between">
+                    <h2 class="font-bold text-xl mb-2">Cardiología</h2>
+                    <span class="inline-block bg-blue-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 flex items-center justify-center text-center">Presencial</span>
+                </div>
+                <p class="font-bold text-xl mb-1 text-gray-700">Centro: Centro Unico</p>
+                <p class="font-bold text-xl mb-1 text-gray-700">Día: Viernes 5, JUL</p>
+                <p class="mb-1 text-gray-700 text-base">Horario: 19:10</p>
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4" onclick="window.location.href='proximos_turnos.html'">Confirmar</button>
+            </div>
+
+            <div class="card bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col my-2 mx-auto">
+                <div class="flex justify-between">
+                    <h2 class="font-bold text-xl mb-2">Otorrinolaringología</h2>
+                    <span class="inline-block bg-blue-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 flex items-center justify-center text-center">Presencial</span>
+                </div>
+                <p class="font-bold text-xl mb-1 text-gray-700">Centro: Centro Unico</p>
+                <p class="font-bold text-xl mb-1 text-gray-700">Día: Viernes 5, JUL</p>
+                <p class="mb-1 text-gray-700 text-base">Horario: 19:00</p>
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4" onclick="window.location.href='proximos_turnos.html'">Confirmar</button>
+            </div>
+
+        </main>
+    </div>
+
+    <footer id="footer" class="footer align-items-center">
+        <div>© Copyrigth 2024</div>
+        <div>Todos los derechos reservados</div>
+    </footer>
+
+</body>
+</html>
+
+<script>
+    window.onload = function() {
+        var fecha = new Date();
+        var dia = fecha.getDate();
+        var mes = fecha.getMonth() + 1;
+        var ano = fecha.getFullYear();
+
+        if(dia < 10)
+            dia = '0' + dia;
+
+        if(mes < 10)
+            mes = '0' + mes;
+
+        var fechaFormateada = ano + '-' + mes + '-' + dia;
+
+        document.getElementById('fecha').value = fechaFormateada;
+    }
+</script>
