@@ -2,17 +2,63 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-<!--    <link rel="stylesheet" href="styles/footer.css">-->
+    <link rel="stylesheet" href="../../styles/footer.css">
+    <link rel="stylesheet" href="../../styles/header.css">
+    <link rel="stylesheet" href="../../styles/general.css">
+    <link rel="stylesheet" href="../../styles/comparacion.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <title>Comparacion de Planes</title>
 </head>
-<body>
+
+<body class="flex flex-col min-h-screen">
 
     <header>
-
+        <div class="header-gradient w-full flex justify-end items-center p-4">
+            <div class="flex items-center">
+                <p class="text-white mr-4">Viernes 5, Junio 19:00</p>
+                <img src="../../img/foto-perfil.webp" alt="Foto de perfil" class="h-10 w-10 rounded-full mr-2">
+                <span class="text-white">Usuario</span>
+            </div>
+        </div>
     </header>
 
-    <main>
+    <main class="flex flex-col items-center p-8 space-y-8">
+        <div class="mb-8 titulo text-center w-full">
+            <h1 class="font-bold text-2xl mb-4">Asociate a nuestro programa de beneficios</h1> <br>
+            <h4>Contamos con un un programa de beneficios para que puedas acceder a los servicios de nuestros centros. Elige el plan que mejor se adapte a tus necesidades.</h4>
+        </div>
 
+        <div class="flex justify-around w-full">
+            <div class="card bg-white shadow-lg rounded-lg p-6 w-1/4">
+                <h2 class="font-bold text-2xl mb-4">Plan Classic</h2>
+                <p>Nuestro plan classic te brinda nuestro exclusivo programa de beneficios, lo que te brinda la ventaja de recibir un descuento del 10% en los servicios de atención en nuestros centros. Solicitá tu credencial sin ningún costo adicional enviando un WhatsApp al número 11-2233-4455 o podes escribirnos por correo a bene@prueba.com.ar. ¡Aprovechá esta oportunidad para maximizar tus beneficios!</p>
+            </div>
+
+            <div class="card bg-white shadow-lg rounded-lg p-6 w-1/4">
+                <h2 class="font-bold text-2xl mb-4">Plan Oro</h2>
+                <ul>
+                    <li>Beneficio 1</li>
+                    <li>Beneficio 2</li>
+                    <li>Beneficio 3</li>
+                </ul>
+            </div>
+
+            <div class="card bg-white shadow-lg rounded-lg p-6 w-1/4">
+                <h2 class="font-bold text-2xl mb-4">Plan Premium</h2>
+                <p>Descripción del plan premium...</p>
+            </div>
+        </div>
+
+        <div class="card card-contacto shadow-lg rounded-lg p-6 w-1/4">
+            <h2 class="font-bold text-2xl mb-4">Contacto</h2>
+            <hr class="mb-4">
+            <p> <i class="fas fa-phone-alt"></i> Telefono: 11-2233-4455</p> <br>
+            <p> <i class="fas fa-clock"></i> Lun-Vie 8 a 16hs y Sáb 8 a 12hs</p> <br>
+            <p> <i class="fas fa-envelope"></i> Email: bene@prueba.com.ar </p> <br>
+        </div>
     </main>
 
     <footer id="footer" class="footer align-items-center">

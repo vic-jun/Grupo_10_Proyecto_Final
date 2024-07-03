@@ -1,16 +1,13 @@
 /* MEDIA QUERYS TABLET */
-
 @media screen and (min-width: 40.1em) and (max-width: 90em) {
     button {
         width:200px !important;
     }
-
     
     #contenedor-principal{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-    
     }
 
     #menu-lateral {
@@ -23,6 +20,7 @@
         flex-direction: column;
         align-items: stretch;
     }
+
     .bloque-2 .flex.flex-col {
         margin-top: 0;
     }
@@ -37,20 +35,16 @@
         margin-bottom: 10px;
     }
 
-    
-
 }
 
     
 /* MEDIA QUERYS SMARTPHONE*/
-    
- @media screen and (max-width: 40em) {
+@media screen and (max-width: 40em) {
 
     #contenedor-principal{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-    
     }
 
     #menu-lateral {
@@ -80,6 +74,7 @@
         flex-direction: column;
         align-items: stretch;
     }
+
     .bloque-2 .flex.flex-col {
         margin-top: 0;
     }
@@ -93,9 +88,6 @@
         margin-top: 10px;
         margin-bottom: 10px;
     }
-    
-
-
 
  }
 
