@@ -12,55 +12,91 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body class="flex flex-col min-h-screen">
-
-    <header>
-        <div class="header-gradient w-full flex justify-end items-center p-4">
+    <header class="header-gradient p-4 flex items-center justify-between relative">
+        <!-- Botón de hamburguesa -->
+        <div class="block md:hidden">
+            <button id="menu-btn" class="focus:outline-none">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+    
+        <div class="absolute left-1/2 transform -translate-x-1/2 md:relative md:left-auto md:transform-none text-white font-bold text-lg">
+            <a href="#">Obra Social</a>
+        </div>
+    
+        <!-- Menú de navegación (oculto por defecto en móviles) -->
+        <nav class="hidden md:flex space-x-4">
+            <a href="../home/home.html" class="text-white hover:text-gray-300">Home</a>
+            <a href="#" class="text-white hover:text-gray-300">Servicios</a>
+            <a href="#" class="text-white hover:text-gray-300">Especialidades</a>
+            <a href="#" class="text-white hover:text-gray-300">Sobre Nosotros</a>
+        </nav>
+    
+        <div class="text-white flex items-center space-x-4">
             <div class="flex items-center">
-                <p class="text-white mr-4">Viernes 5, Junio 19:00</p>
                 <img src="../../img/foto-perfil.webp" alt="Foto de perfil" class="h-10 w-10 rounded-full mr-2">
-                <span class="text-white">Usuario</span>
+                <span class="hidden md:inline">Usuario</span>
             </div>
-        </div>   
+        </div>
     </header>
+    
+    <div id="side-menu" class="fixed inset-y-0 left-0 w-64 bg-gray-800 text-white transform -translate-x-full transition-transform md:hidden">
+        <nav class="flex flex-col space-y-4 p-4">
+            <button id="close-menu" class="text-white flex items-center justify-center focus:outline-none mb-4">
+                <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+                <span>Volver</span>
+            </button>
+            <a href="../home/home.html" class="text-white hover:text-gray-300">Home</a>
+            <a href="#" class="hover:text-gray-300">Servicios</a>
+            <a href="#" class="hover:text-gray-300">Especialidades</a>
+            <a href="#" class="hover:text-gray-300">Sobre Nosotros</a>
+        </nav>
+    </div>
 
-    <div id="contenedor-principal" class="flex flex-grow">
-        <div id="menu-lateral" class="w-64 bg-gray-200 text-white">
+    <div id="contenedor-principal" class="flex flex-col md:flex-row flex-grow">
+        <div id="menu-lateral" class="w-full md:w-64 bg-gray-200 text-white md:flex-shrink-0">
             <p class="text-2xl font-bold p-5 text-black">Turnos</p>
-                <ul class="space-y-2 p-5">
-                    <li>
-                        <a href="../principal/solicitar_turno.html" class="block py-2.5 px-4 rounded hover:bg-blue-900 text-black hover:text-white flex items-center">
-                            <i class="fas fa-search mr-2"></i> Solicitar turno
-                        </a>
-                    </li>
-                    <li>
-                        <a href="../principal/proximos_turnos.html" class="block py-2.5 px-4 rounded hover:bg-blue-900 text-black hover:text-white flex items-center">
-                            <i class="fas fa-calendar-alt mr-2"></i> Próximos turnos
-                        </a>
-                    </li>
+            <ul class="space-y-2 p-5">
+                <li>
+                    <a href="../principal/solicitar_turno.html" class="block py-2.5 px-4 rounded hover:bg-blue-900 text-black hover:text-white flex items-center">
+                        <i class="fas fa-search mr-2"></i> Solicitar turno
+                    </a>
+                </li>
+                <li>
+                    <a href="../principal/proximos_turnos.html" class="block py-2.5 px-4 rounded hover:bg-blue-900 text-black hover:text-white flex items-center">
+                        <i class="fas fa-calendar-alt mr-2"></i> Próximos turnos
+                    </a>
+                </li>
             </ul>
         </div>
-
+    
         <main class="flex-grow">
-            <div id="bloque" class="bloque-1 bg-blue-900 text-white p-8 rounded-lg w-3/4 mx-auto mt-8 text-center">
+            <div id="bloque" class="bg-blue-900 text-white p-8 rounded-lg w-full md:w-3/4 mx-auto mt-8 text-center">
                 <i class="fa-solid fa-circle-exclamation text-5xl mb-2"></i>
-                <h2 class="font-bold text-2xl ">No se encontraron turnos disponibles</h2>
+                <h2 class="font-bold text-2xl">No se encontraron turnos disponibles</h2>
                 <div class="text-sm my-3">
                     <p>Estimado paciente, lamentablemente no hay turnos disponibles para esta especialidad.</p>
                     <p>Le sugerimos que intente nuevamente en los próximos días.</p>
                     <p>Agradecemos su comprensión y recomendamos evitar llamadas telefónicas, ya que la oferta de turnos es la misma.</p>
                 </div>
-                <button style="width: 400px;" class="bg-orange-500 text-white py-3 rounded mt-2">
-                    <a href="../principal/proximos_turnos.html">Proximos turnos disponibles</a>
+                <button class="bg-orange-500 text-white py-3 rounded mt-2 w-full md:w-96">
+                    <a href="../principal/proximos_turnos.html">Próximos turnos disponibles</a>
                 </button>
             </div>
         </main>
     </div>
+    
 
     <footer id="footer" class="footer align-items-center">
         <div>© Copyrigth 2024</div>
         <div>Todos los derechos reservados</div>
     </footer>
     <script src="https://kit.fontawesome.com/bf735813b1.js" crossorigin="anonymous"></script>
+    <script src="../../js/header.js"></script>
 </body>
 </html>
 
