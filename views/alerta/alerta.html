@@ -74,6 +74,11 @@
                             <i class="fas fa-calendar-alt mr-2"></i> Próximos turnos
                         </a>
                     </li>
+                    <li>
+                        <a href="../principal/plan_salud.html" class="block py-2.5 px-4 rounded bg-blue-900 flex items-center">
+                            <i class="fas fa-solid fa-robot text-white mr-2"></i> Solicitar plan con AI
+                        </a>
+                    </li>
             </ul>
         </div>
 
@@ -102,7 +107,20 @@
 </html>
 
 <script>
-    function seleccionarEspecialidad(especialidad) {
-        document.getElementById('especialidadSeleccionada').value = especialidad;
+    window.onload = function() {
+        var fecha = new Date();
+        var dia = fecha.getDate();
+        var mes = fecha.getMonth() + 1;
+        var ano = fecha.getFullYear();
+
+        if(dia < 10)
+            dia = '0' + dia;
+
+        if(mes < 10)
+            mes = '0' + mes;
+
+        var fechaFormateada = ano + '-' + mes + '-' + dia;
+
+        document.getElementById('fecha').value = fechaFormateada;
     }
 </script>

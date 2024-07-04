@@ -34,13 +34,13 @@
                         </a>
                     </li>
                     <li>
-                        <a href="plan_salud.html" class="block py-2.5 px-4 rounded hover:bg-blue-900 text-black hover:text-white flex items-center">
-                            <i class="fas fa-solid fa-robot mr-2"></i> Solicitar plan con AI
+                        <a href="proximos_turnos.html" class="block py-2.5 px-4 rounded hover:bg-blue-900 text-black hover:text-white flex items-center">
+                            <i class="fas fa-calendar-alt mr-2"></i> Próximos turnos
                         </a>
                     </li>
                     <li>
-                        <a href="proximos_turnos.html" class="block py-2.5 px-4 rounded hover:bg-blue-900 text-black hover:text-white flex items-center">
-                            <i class="fas fa-calendar-alt mr-2"></i> Próximos turnos
+                        <a href="plan_salud.html" class="block py-2.5 px-4 rounded hover:bg-blue-900 text-black hover:text-white flex items-center">
+                            <i class="fas fa-solid fa-robot mr-2"></i> Solicitar plan con AI
                         </a>
                     </li>
             </ul>
@@ -70,7 +70,7 @@
                         <span class="text-lg mb-2">Formato:</span> <br>
                         <div class="flex">
                             <div class="flex items-center mr-2">
-                                <input type="radio" id="presencial" name="formatoTurno" value="Presencial" class="text-blue-500 focus:ring-blue-500">
+                                <input type="radio" id="presencial" name="formatoTurno" value="Presencial" class="text-blue-500 focus:ring-blue-500" checked>
                                 <label for="presencial" class="ml-2 text-white">Presencial</label>
                             </div>
                             <div class="flex items-center">
@@ -100,5 +100,22 @@
 <script>
     function seleccionarEspecialidad(especialidad) {
         document.getElementById('especialidadSeleccionada').value = especialidad;
+    }
+
+    window.onload = function() {
+        var fechaTurno = new Date();
+        var dia = fechaTurno.getDate();
+        var mes = fechaTurno.getMonth() + 1;
+        var ano = fechaTurno.getFullYear();
+
+        if(dia < 10)
+            dia = '0' + dia;
+
+        if(mes < 10)
+            mes = '0' + mes;
+
+        var fechaFormateada = ano + '-' + mes + '-' + dia;
+
+        document.getElementById('fechaTurno').value = fechaFormateada;
     }
 </script>
