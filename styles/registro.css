@@ -8,7 +8,7 @@ body {
     background: linear-gradient(to right, #000000, #013192);
 }
 
-.login-container {
+.container {
     max-width: 400px;
     width: 100%;
     background-color: white;
@@ -19,23 +19,19 @@ body {
     overflow: hidden; /* Evita que el gradiente de fondo se extienda más allá del contenedor */
 }
 
-.login-container h2 {
+h2 {
     font-size: 24px;
     color: #333;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .inline-text {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
     color: #777;
     font-size: 16px;
+    margin-bottom: 20px;
 }
 
 .inline-text a {
-    margin: 0 4px;
     color: #0066cc;
     text-decoration: none;
 }
@@ -47,7 +43,7 @@ body {
 form {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
 }
 
 label {
@@ -59,25 +55,15 @@ label {
 }
 
 .input-document,
-.input-password {
+input[type="email"],
+input[type="password"] {
     padding: 12px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     width: 100%;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 14px;
     box-sizing: border-box;
-}
-
-.link-container {
-    align-self: flex-end;
-    margin-bottom: 10px;
-    text-decoration: underline;
-    color: #004a99;
-}
-
-.link-container p {
-    color: #004a99;
 }
 
 button {
@@ -98,11 +84,12 @@ button:hover {
 
 /* Media Query para pantallas más pequeñas (como celulares) */
 @media only screen and (max-width: 600px) {
-    .login-container {
+    .container {
+        margin: 0rem 2rem;
         padding: 20px;
     }
 
-    .login-container h2 {
+    h2 {
         font-size: 20px;
     }
 
@@ -111,7 +98,8 @@ button:hover {
     }
 
     .input-document,
-    .input-password {
+    input[type="email"],
+    input[type="password"] {
         padding: 10px;
         font-size: 12px;
     }
