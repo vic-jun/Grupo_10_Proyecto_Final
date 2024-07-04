@@ -1,0 +1,115 @@
+body {
+    font-family: 'Roboto', sans-serif !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(to right, #000000, #013192);
+}
+
+.login-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+.login-container h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: #333;
+}
+
+.login-container p {
+    color: #777;
+    font-size: 20px;
+}
+
+.inline-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    color: #777;
+    font-size: 20px;
+}
+
+.inline-text a {
+    margin: 0 4px;
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.inline-text a:hover {
+    text-decoration: underline;
+}
+
+.login-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-container label {
+    align-self: flex-start;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.h2-container{
+    margin-right: 214px;
+    align-self: flex-start;
+}
+
+.link-container{
+    align-self: flex-end;
+    margin-bottom: 10px;
+    text-decoration: underline;
+    color: #004a99;
+}
+
+.link-container p{
+    color: #004a99;
+}
+
+.login-container a:hover {
+    text-decoration: underline;
+}
+
+.input-document{
+    margin-bottom: 20px;
+    padding: 12px 15px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.input-password{
+    margin: 0;
+    padding: 12px 15px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+button {
+    cursor: pointer;
+    background-color: coral !important;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #004a99 !important;
+}
