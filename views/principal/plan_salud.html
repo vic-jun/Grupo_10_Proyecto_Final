@@ -2,20 +2,93 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Solicitar Turno</title>
-</head>
-<body>
+    <title>Proximos turnos</title>
+    <link rel="stylesheet" href="../../styles/footer.css">
+    <link rel="stylesheet" href="../../styles/header.css">
+    <link rel="stylesheet" href="../../styles/general.css">
+    <link rel="stylesheet" href="../../styles/proximos_turnos.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"></head>
+<body class="flex flex-col min-h-screen">
 
     <header>
-
+        <div class="header-gradient w-full flex justify-end items-center p-4">
+            <div class="flex items-center">
+                <p class="text-white mr-4">Viernes 5, Junio 19:00</p>
+                <img src="../../img/foto-perfil.webp" alt="Foto de perfil" class="h-10 w-10 rounded-full mr-2">
+                <span class="text-white">Usuario</span>
+            </div>
+        </div>   
     </header>
 
-    <main>
+    <div id="contenedor-principal" class="flex">
+        <div id="menu-lateral" class="w-72 bg-gray-200 text-white">
+            <p class="text-2xl font-bold p-5 text-black">Plan personalizado</p>
+                <ul class="space-y-2 p-5">
+                    <li>
+                        <a href="solicitar_turno.html" class="block py-2.5 px-4 rounded hover:bg-blue-900 text-black hover:text-white flex items-center">
+                            <i class="fas fa-search mr-2"></i> Solicitar turno
+                        </a>
+                    </li>
+                    <li>
+                        <a href="solicitar_turno2.html" class="block py-2.5 px-4 rounded hover:bg-blue-900 hover:text-white text-black flex items-center">
+                            <i class="fas fa-calendar-alt mr-2"></i> Próximos turnos
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="block py-2.5 px-4 rounded bg-blue-900  text-black text-white flex items-center">
+                            <i class="fas fa-solid fa-robot mr-2"></i> Solicitar plan con AI
+                        </a>
+                    </li>
+            </ul>
+        </div>
 
-    </main>
+        <main class="flex justify-center items-center w-full">
+            <div id="tarjeta" class="bg-white rounded-lg shadow-lg overflow-hidden my-8">
+                <div class="bg-gradient-to-r from-blue-500 to-blue-700 p-4 text-white">
+                    <h2 class="text-xl font-bold">Solicitar Plan de Salud Personalizado</h2>
+                </div>
+                <div class="p-10">
+                    <form id="form-solicitar-plan">
+                        <div class="mb-4">
+                            <label for="nombre" class="block text-gray-700 text-sm font-bold mb-2">Nombre Completo:</label>
+                            <input type="text" id="nombre" name="nombre" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="edad" class="block text-gray-700 text-sm font-bold mb-2">Edad:</label>
+                            <input type="number" id="edad" name="edad" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="genero" class="block text-gray-700 text-sm font-bold mb-2">Género:</label>
+                            <select id="genero" name="genero" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                                <option value="masculino">Masculino</option>
+                                <option value="femenino">Femenino</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                        <div class="mb-4">
+                            <label for="historial-medico" class="block text-gray-700 text-sm font-bold mb-2">Historial Médico:</label>
+                            <input type="file" id="historial-medico" name="historial-medico" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="preferencias" class="block text-gray-700 text-sm font-bold mb-2">Preferencias de Plan:</label>
+                            <textarea id="preferencias" name="preferencias" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" rows="4" required></textarea>
+                        </div>
+                        <div class="flex justify-center">
+                            <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                                Solicitar Plan
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
 
-    <footer>
-
+    <footer id="footer" class="footer align-items-center">
+        <div>© Copyrigth 2024</div>
+        <div>Todos los derechos reservados</div>
     </footer>
 
 </body>
