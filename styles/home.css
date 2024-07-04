@@ -1,5 +1,5 @@
 .hero {
-    background: url('/img/fondoGris.jpg') no-repeat center center/cover;
+    background: url('/img/fondoBlanco.jpg') no-repeat center center/cover;
 }
 
 .button {
@@ -7,20 +7,11 @@
     background-color: var(--botones) !important;
 }
 
-.hero-image{
+.hero-image {
     width: 80%;
 }
 
-.hero-content{
+.hero-content {
    padding: 0rem 3rem;
-}
 
-@media (max-width: 768px) {
-    .hero-content {
-        flex-direction: column;
-        text-align: center;
-    }
-    .hero-text {
-        margin-bottom: 20px;
-    }
 }
