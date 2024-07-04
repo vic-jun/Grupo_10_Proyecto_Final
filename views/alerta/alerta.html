@@ -14,13 +14,50 @@
 <body class="flex flex-col min-h-screen">
 
     <header>
-        <div class="header-gradient w-full flex justify-end items-center p-4">
+        <div class="header-gradient w-full flex justify-between items-center p-4">
+            <a href="../principal/solicitar_turno.html" class="text-white text-xl">&lt; volver</a>
+            <div class="flex space-x-4">
+                <p class="pr-2">Filtros:</p>
+                <select class="bg-white rounded p-2">
+                    <option>Centros (1)</option>
+                    <option>Centro unico</option>
+                </select>
+                <input type="date" id="fecha" class="bg-white rounded p-2">
+                <select class="bg-white rounded p-2">
+                    <option>Día semanal (7)</option>
+                    <option>Todos</option>
+                    <option>Lunes</option>
+                    <option>Martes</option>
+                    <option>Miércoles</option>
+                    <option>Jueves</option>
+                    <option>Viernes</option>
+                    <option>Sábado</option>
+                    <option>Domingo</option>
+                </select>
+                <select class="bg-white rounded p-2">
+                    <option>Horarios (3)</option>
+                    <option>Todos</option>
+                    <option>Mañana</option>
+                    <option>Tarde</option>
+                    <option>Noche</option>
+                </select>
+                <select class="bg-white rounded p-2">
+                    <option>Especialidad (6)</option>
+                    <option>Todos</option>
+                    <option>Ginecología</option>
+                    <option>Dermatología</option>
+                    <option>Clínica Médica</option>
+                    <option>Cardiología</option>
+                    <option>Traumatología</option>
+                    <option>Otorrinolaringología</option>
+                </select>
+            </div>
             <div class="flex items-center">
                 <p class="text-white mr-4">Viernes 5, Junio 19:00</p>
                 <img src="../../img/foto-perfil.webp" alt="Foto de perfil" class="h-10 w-10 rounded-full mr-2">
                 <span class="text-white">Usuario</span>
             </div>
-        </div>   
+        </div>
     </header>
 
     <div id="contenedor-principal" class="flex flex-grow">
